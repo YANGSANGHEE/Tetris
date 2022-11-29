@@ -4,6 +4,14 @@
   box-sizing: border-box;
   border: 1px solid red;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('/asset/bg.png') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button,
 input {
   border: none;
