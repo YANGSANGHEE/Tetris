@@ -1,1 +1,10 @@
-@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+@font-face {
+  font-family: 'bitbit';
+  src: url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),
+    url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Galmuri_11';
+  src: url('//cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+}
