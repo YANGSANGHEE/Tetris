@@ -20,7 +20,7 @@ const TitleSet = styled.div`
     font-weight: bold;
     margin-bottom: ${calcPx(60)};
     cursor: pointer;
-    transition: ease 0.5s;
+    transition: ease 0.3s;
     &:hover {
       background: ${(props) => props.theme.color.mint};
       color: #fff;
@@ -38,7 +38,11 @@ const TitleSet = styled.div`
   }
 `;
 
-const IntroMenu = ({ KeyEvent }: { KeyEvent: () => void }) => {
+const IntroMenu = ({
+  KeyEvent,
+}: {
+  KeyEvent: (e: React.MouseEvent<HTMLInputElement>) => void;
+}) => {
   return (
     <TitleSet>
       <div></div>

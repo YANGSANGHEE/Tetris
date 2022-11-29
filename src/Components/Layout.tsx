@@ -3,7 +3,7 @@ import GameSet from './GameSet';
 const Layout = () => {
   return (
     <>
-      <GameSet row={20} column={10} />
+      <GameSet row={20} columns={10} />
     </>
   );
 };
