@@ -1,18 +1,21 @@
 import React from 'react';
 import TetrisPreview from './TetrisPreview';
 
-const TetrisPreviews = ({ tetrominoes }: { tetrominoes: object[] }) => {
-  const PreviewTetrominoes: object[] = tetrominoes
-    .slice(1 - tetrominoes.length)
-    .reverse();
+const TetrisPreviews = ({ Tetrominoes }: { Tetrominoes: object[] }) => {
+  const PreviewTetrominoes: object[] = Tetrominoes.slice(
+    1 - Tetrominoes.length
+  ).reverse();
+  console.log(PreviewTetrominoes);
   return (
     <>
-      {PreviewTetrominoes.map((tetroval, index: number) => {
-        <TetrisPreview
-          tetromino={tetroval}
-          index={index}
-          key={index}
-        ></TetrisPreview>;
+      {PreviewTetrominoes.map((tetroval: any, index: number) => {
+        return (
+          <TetrisPreview
+            Tetrominoes={tetroval}
+            index={index}
+            key={index}
+          ></TetrisPreview>
+        );
       })}
     </>
   );

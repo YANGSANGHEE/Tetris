@@ -7,7 +7,7 @@ const TetrisStatInfo = styled.ul`
   position: absolute;
   width: ${calcPx(181)};
   right: ${calcPx(-230)};
-  bottom: 0;
+  bottom: ${calcPx(141)};
   list-style: none;
   text-align: left;
   font-family: bitbit;
