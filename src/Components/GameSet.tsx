@@ -1,9 +1,13 @@
 import IntroMenu from './IntroMenu';
 import Tetris from './Tetris';
 import { GameoverSet } from '@/Hooks/GameoverSet';
-import React, { useEffect } from 'react';
+import { calcPx } from '@/Hooks/CalcPx';
+import { useEffect } from 'react';
+import styled from 'styled-components';
 
-const GameSet = ({ columns, row }: { columns: number; row: number }) => {
+const TetrisSet = styled.div``;
+
+const GameSet = ({ column, row }: { column: number; row: number }) => {
   const [Gameover, SetGameover, resetGame] = GameoverSet();
 
   //게임 오버시 버튼 클릭하면 게임 다시시작
@@ -22,13 +26,13 @@ const GameSet = ({ columns, row }: { columns: number; row: number }) => {
   }, []);
 
   return (
-    <div className='TetrisSet'>
+    <TetrisSet>
       {Gameover ? (
         <IntroMenu KeyEvent={gameStart}></IntroMenu>
       ) : (
-        <Tetris columns={columns} rows={row} SetGameover={SetGameover} />
+        <Tetris column={column} row={row} SetGameover={SetGameover} />
       )}
-    </div>
+    </TetrisSet>
   );
 };
 

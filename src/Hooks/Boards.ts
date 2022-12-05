@@ -1,14 +1,7 @@
 import { useState } from 'react';
 import { setBoard } from '@/Common/SetBorad';
 
-export const Boards = ({
-  rows,
-  columns,
-}: {
-  rows: number;
-  columns: number;
-}) => {
-  const boards = useState<any>(setBoard({ rows, columns }));
-
-  return boards;
+export const Boards = ({ row, column }: { row: number; column: number }) => {
+  const [boards] = useState<any>(setBoard({ row, column }));
+  return [boards];
 };

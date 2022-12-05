@@ -1,19 +1,17 @@
 import { Cell } from './Cell';
 
 export const setBoard = ({
-  rows,
-  columns,
+  row,
+  column,
 }: {
-  rows: number;
-  columns: number;
+  row: number;
+  column: number;
 }): object => {
-  const build = [
-    { length: rows },
-    () => [{ length: columns }, () => ({ Cell })],
-  ];
-
+  const build = Array.from({ length: row }, () =>
+    Array.from({ length: column }, () => ({ ...Cell }))
+  );
   return {
-    rows: build,
-    size: { rows, columns },
+    row: build,
+    size: { row, column },
   };
 };
